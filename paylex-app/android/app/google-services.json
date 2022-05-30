@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "980491025054",
+    "project_id": "paylex-f28ea",
+    "storage_bucket": "paylex-f28ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980491025054:android:226aa65c60cc72d5c7198f",
+        "android_client_info": {
+          "package_name": "com.paylex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980491025054-0l0ch8jodbplrsbggjhrpmm9u4ph48e7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paylex",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "980491025054-3972ag9m0u5a25am7ps4aeiasocj680r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_b8-Dtx4so1S1Pp0lpumpe-9TkB4jBiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980491025054-3972ag9m0u5a25am7ps4aeiasocj680r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

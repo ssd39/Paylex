@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rapyd Checkout Toolkit</title>
+        <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>
+        <script>
+            const sendMessage = (msg)=>{
+                window.ReactNativeWebView.postMessage(msg);
+            } 
+            window.startPayment = (id)=> {
+                sendMessage(JSON.stringify({'type':'log','data':"[HTML Log] Initiatin Rapyd Checkput"}))
+                sendMessage(JSON.stringify({'type':'log','data':`[HTML Log] ${id}`}))
+                let checkout = new RapydCheckoutToolkit({
+                    pay_button_text: "Click to pay",
+                    pay_button_color: "blue",
+                    id
+                });
+                checkout.displayCheckout();
+            }
+            window.onload = function () {
+                sendMessage(JSON.stringify({'type':'action','data':'start_payment'}))
+            }
+            window.addEventListener('onCheckoutPaymentSuccess', function (event) {
+                console.log(event.detail)
+                sendMessage(JSON.stringify({'type':'log','data':`[HTML Log] ${JSON.stringify(event.detail)}`}))
+                sendMessage(JSON.stringify({'type':'action','data':'payment_sucess'}))
+            });
+            window.addEventListener('onCheckoutFailure', function (event) {
+                console.log(event.detail.error)
+                sendMessage(JSON.stringify({'type':'log','data':`[HTML Log] ${JSON.stringify(event.detail.error)}`}))
+                sendMessage(JSON.stringify({'type':'action','data':'payment_error'}))
+            });
+        </script>
+    </head>
+
+    <body style="background-color: white; display: flex; align-items: center; flex-direction: column; margin: 0">
+        <div style="width: 90%" id="rapyd-checkout"></div>
+    </body>
+</html>
