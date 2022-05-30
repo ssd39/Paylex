@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #282c34;
+  overflow: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.animatedemoji{
+  display: flex;
+  justify-content: flex-end;
+
+  width: 43%;
+  margin-top: -30%;
+  margin-left: 49%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.imgd{
+  margin-top: 40px;
+  height: 60px;
+  align-self: flex-start;
+  width: 230px;
+  display: flex;
+}
+.imgdd{
+
+  height: 60px;
+  align-self: flex-end;
+  width: 230px;
+  display: flex;
+}
+.Imagee {
+  height: 500px;
+  width:400px;
+  align-self: flex-end;
+  margin-right: 250px;
+  margin-top: -450px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.circles {
+
+opacity: 40%;
+  margin-left: -15%;
+
+  height: 60vmin;
+  position: relative;
+  width: 60vmin;
+ 
+
+}
+
+.circles > div {
+  animation: growAndFade 6s infinite ease-out;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 100%;
+  opacity: 30%;
+  position: absolute;
+  width: 100%;
+}
+.circles .circle1 {
+  animation-delay: 1s;
+}
+.circles .circle2 {
+  animation-delay: 2s;
+}
+.circles .circle3 {
+  animation-delay: 3s;
+}
+@keyframes growAndFade {
+  0% {
+    opacity: 0.25;
+    transform: scale(0);
+ }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+ }
+}
+.circles2 {
+
+ opacity: 40%;
+ 
+  height: 60vmin;
+  margin-right: -15%;
+  position: relative;
+  width: 60vmin;
+
+}
+
+.circles2 > div {
+  animation: growAndFade 6s infinite ease-out;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 100%;
+  opacity: 20%;
+  position: absolute;
+  width: 100%;
+}
+.circles2 .circle1 {
+  animation-delay: 1s;
+}
+.circles2 .circle2 {
+  animation-delay: 2s;
+}
+.circles2 .circle3 {
+  animation-delay: 3s;
+}
+
+.texthype{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: -20%;
+  margin-left: 10%;
+  align-items: center;
+}
+h1 {
+  font-size: 50px;
+  color:white
+}

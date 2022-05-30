@@ -1,0 +1,105 @@
+.grid-container {
+    display: grid;
+    column-gap: 50px;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .paybox:hover {
+    background-color: #ffc107 !important;
+  }
+  
+  .paybox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+    width: 100%;
+  }
+  .card {
+    position: relative;
+    min-width: 380px;
+    min-height: 150px;
+    color: #a18a96;
+    background-color: #ffc107;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 12px;
+    box-shadow: 10px 10px 8px black;
+  }
+  .card_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  
+    padding-bottom: 14px;
+    background-color: #212121;
+  
+    transform: translateY(70px);
+    transition: transform 0.25s;
+  }
+  
+  .card_title {
+    color: #6a515e;
+    line-height: 5px;
+    
+  }
+  .card_subtitle {
+    display: block;
+    font-size: 16px;
+    line-height: 10px;
+  }
+  .card_description {
+    font-size: 14px;
+    opacity: 0;
+    width: 92%;
+    transition: opacity 0.5s;
+  }
+  .card:hover .card_content {
+    transform: translateY(0);
+  }
+  .card:hover .card_description {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    height: 80%;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #212121;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .container {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  
